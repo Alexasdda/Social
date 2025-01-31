@@ -1,0 +1,8 @@
+.appHeader {
+    grid-area: h;
+    background-color: lightblue;
+}
+
+.appHeader img {
+    width: 100px;
+}
