@@ -10,4 +10,4 @@ const Profile = () => {
         </div>
     )
 }
-export default ProfileInfo;
+export default Profile;

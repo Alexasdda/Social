@@ -1,39 +1,36 @@
 import React from 'react';
 import classes from './Dialogs.module.css'
-import NavLink from "react-router-dom/NavLink.js";
+import Messages from "./Messages/Message.jsx";
+import DialogItem from "./DialogItems/DialogItem.jsx";
 
-const DialogItems = (props) => {
-    let path = '/dialog/' + '' + props.id;
-    return (
-        <div className={classes.dildo}><NavLink to={path}>{props.name}</NavLink></div>
-    )
-}
-const Massages = (props) => {
-    return (
-        <div className={classes.message}>{props.masseg}</div>
-    )
-}
+const Dialogs = (props) => {
+    let dialogsData = [
+        {id: 0, name: 'Nikita'},
+        {id: 1, name: 'Macks'},
+        {id: 2, name: 'Macksat'},
+        {id: 3, name: 'Alecksei'},
+        {id: 4, name: 'Valera'}
+    ];
 
-const Dialogs = () => {
+    let messagesData = [
+        {id: 0, message: 'Kik'},
+        {id: 1, message: 'AAA'},
+        {id: 2, message: 'asda'},
+        {id: 3, message: 'gfgs'},
+        {id: 4, message: 'gsgsg'},
+    ];
+
+    let messagesElement = messagesData.map(message => <Messages message={message.message}/>);
+    let dialogsElement = dialogsData.map(d => <DialogItem name={d.name} id={d.id}/>);
+
     return (
         <div className={classes.dialogs}>
-            <div className={classes.dialogItem}>
-                <div className={classes.dialog}>
-                    <DialogItems name='Ala' id='1'/>
-                    <DialogItems name='Lexa' id='2'/>
-                    <DialogItems name='Alkash' id='3'/>
-                    <DialogItems name='Olo' id='4'/>
-                    <DialogItems name='Ara' id='5'/>
-                </div>
+            <div>
+                {dialogsElement}
             </div>
             <div className={classes.messages}>
-                <Massages masseg='kik'/>
-                <Massages masseg='Hi'/>
-                <Massages masseg='Lol'/>
-                <Massages masseg='kik'/>
-                <Massages masseg='Domas'/>
+                {messagesElement}
             </div>
-
         </div>
     )
 }

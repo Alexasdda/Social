@@ -3,16 +3,19 @@ import classes from "./ProfileInfo.module.css";
 
 const ProfileInfo = () => {
     return (
-        <div>
-            <div>
-                <img className={classes.fonFotos}
-                     src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZ-MpBBiZlrzhCyX5Q5BF-6IphUptEJdeJ9Q&s"/>
+        <div className={classes.profile}>
+            <img className={classes.avatarka}
+                 src='https://c.wallhere.com/photos/9a/9c/selective_coloring_black_background_dark_background_simple_background_anime_girls-2219470.jpg!d'/>
+            <h1 className={classes.title}>ALEX DEMIN</h1>
+            <h2 className={classes.titleStatus}>STATUS:</h2>
+            <p className={classes.description}>Мои пиадатые друзья считают меня гадом</p>
+            <div className={classes.buttons}>
+                <button className={classes.button}>Message</button>
+                <button className={classes.button}>Подробнее</button>
             </div>
-            <div className="app-avatar"><img
-                src="https://pm1.aminoapps.com/7167/9cf283ea5488712e00e8322b9fc9866ad3da98fcr1-895-895v2_uhq.jpg"/>
-            </div>
-
+            <div className={classes.separator}></div>
+            <button className={classes.editButton}>Редактировать профиль</button>
         </div>
-    )
-}
+    );
+};
 export default ProfileInfo;
