@@ -1,13 +1,13 @@
 import classes from "./Header.module.css";
 
-const Header = () => {
+export const Header = () => {
     return (
         <header className={classes.appHeader}>
-            <img src="https://upload.wikimedia.org/wikipedia/ru/b/b4/Puma_logo.svg"
-                 className="Applogo"
-                 alt="gogo"/>
+            <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Rust_vector_logo.svg/1280px-Rust_vector_logo.svg.png"
+                className="Applogo"
+                alt="gogo"/>
         </header>
 
     )
 }
-export default Header;

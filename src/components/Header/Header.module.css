@@ -1,9 +1,24 @@
 .appHeader {
     grid-area: h;
-    background-color: lightblue;
+    background-color: #2F4F4F;
 }
 
 .appHeader img {
-    width: 100px;
+    width: 170px;
     margin-left: 15px;
+    padding-top: 10px;
+    cursor: pointer;
+    animation: animate 4.5s infinite;
 }
+
+/*@keyframes animate {*/
+/*    0% {*/
+/*        transform: perspective(23rem) rotateY(0deg);*/
+/*    }*/
+/*    10% {*/
+/*        transform: perspective(23rem) rotateY(-66deg);*/
+/*    }*/
+/*    90%, 100% {*/
+/*        transform: perspective(23rem) rotateY(360deg);*/
+/*    }*/
+/*}*/
