@@ -1,11 +1,15 @@
 
 .item {
-    color: beige;
+    /*display: flex;*/
 }
 
-.item img {
+.myAvatar img {
     width: 50px;
     height: 50px;
-    border-radius: 50%;
+    border-radius: 55%;
 
+}
+
+.postImg img {
+    width: 980px;
 }

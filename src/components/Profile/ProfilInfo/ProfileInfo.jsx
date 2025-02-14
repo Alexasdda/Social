@@ -1,7 +1,7 @@
 import './ProfileInfo.module.css'
 import classes from "./ProfileInfo.module.css";
 
-const ProfileInfo = () => {
+export const ProfileInfo = () => {
     return (
         <div className={classes.profile}>
             <img className={classes.avatarka}
@@ -10,7 +10,7 @@ const ProfileInfo = () => {
             <h2 className={classes.titleStatus}>STATUS:</h2>
             <p className={classes.description}>Мои пиадатые друзья считают меня гадом</p>
             <div className={classes.buttons}>
-                <button className={classes.button}>Message</button>
+                <a href="/dialogs" className={classes.button}>Message</a>
                 <button className={classes.button}>Подробнее</button>
             </div>
             <div className={classes.separator}></div>
@@ -18,4 +18,3 @@ const ProfileInfo = () => {
         </div>
     );
 };
-export default ProfileInfo;

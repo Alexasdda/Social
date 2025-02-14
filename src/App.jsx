@@ -2,7 +2,7 @@ import './App.css';
 import {Header} from "./components/Header/Hader.jsx";
 import {BrowserRouter, Route} from "react-router-dom";
 import {Nav} from "./components/Navbar/Nav.jsx";
-import {Profile} from "./components/Profile/Profil.jsx";
+import {Profile} from "./components/Profile/Profile.jsx";
 import {Dialogs} from "./components/Dialogs/Dialogs.jsx";
 
 
@@ -14,8 +14,7 @@ export const App = (props) => {
                 <Header/>
                 <Nav sideFriends={props.state.sidebar}/>
                 <div className="app_wrapper-content">
-                    <Route path='/dialogs' render={() => <Dialogs dialogs={props.state.dialogPage}
-                                                                  messages={props.state.dialogPage}/>}/>
+                    <Route path='/dialogs' render={() => <Dialogs dialogs={props.state.dialogPage}/>}/>
                     <Route path='/profil' render={() => <Profile posts={props.state.profilePage}/>}/>
 
 

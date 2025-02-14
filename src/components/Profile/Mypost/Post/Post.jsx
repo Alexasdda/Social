@@ -1,14 +1,20 @@
 import classes from "./Post.module.css";
 
-const Post = (props) => {
+export const Post = (props) => {
+
     return (
 
         <div className={classes.item}>
-            <img
-                src="https://steamuserimages-a.akamaihd.net/ugc/1684893251099717200/CCEE102CF0C9F1F9470A0F87ED9365C6D9E89895/"/>
-            {props.massage}
+            <div></div>
+            {props.message}
+            <div className={classes.myAvatar}><img src={props.myAvatar}/></div>
+            {props.name}
+
+
+            <div className={classes.postImg}><img src={props.postImageUrl}/></div>
+
             <div>
-                <span>Like {props.like}</span>
+                <span>Like {props.likes}</span>
             </div>
 
 
@@ -16,6 +22,6 @@ const Post = (props) => {
 
     )
 }
-export default Post;
+
 
 
